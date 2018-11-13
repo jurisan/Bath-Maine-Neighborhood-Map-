@@ -1,16 +1,16 @@
-### Udacity Neighborhood Map Project
+## Udacity Neighborhood Map Project
 - A Single Page app using Google API and Foursquare API for markers.
 
-## Getting Started
+### Getting Started
 - The project files can be downloaded from GitHub.
 - install all project dependencies with npm install
 - start the development server with npm start
 - you'll be able to listen the server on http://localhost:3000
 
-## Production Mode
+### Production Mode
 - Use the service worker in the production mood to cache the app with npm run build serve -s build
 
-## Code Dependencies
+### Code Dependencies
 
 - Google Maps API
 - Foursquare API
@@ -20,12 +20,12 @@
 - HTML
 - CSS
 
-## How to Run
+### How to Run
 
 - Choose the location from search field.
 - Click on Markers to see more detail on foursquare site.
 
-## References
+### References
 
 - https://developer.foursquare.com/
 - https://developers.google.com/maps/documentation/javascript/
