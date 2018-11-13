@@ -1,0 +1,49 @@
+body {
+	margin: 0;
+	padding: 0;
+	font-family: sans-serif;
+	font-weight: 400;
+}
+
+.search-box {
+	
+	top: 20px;
+	left: 20px;
+	position: fixed;
+	border-radius: 4px;
+}
+
+.search-field {
+	width: 230px;
+	padding: 6px;
+	
+}
+
+.search-items {
+	background: #AFE089;
+	border: navy;
+	border-radius: 4px;
+	overflow: auto;
+	max-height: 200px;
+	padding: 0px;
+	margin: 0px;
+	font-family: 'Amatic SC', cursive;
+	font-size: 1em;
+	
+}
+
+.destinations {
+	font-family: 'Amatic SC', cursive;
+	font-size: 1em;
+	color: floralwhite;
+	cursor: pointer;
+	transition: background-color 5400ms;
+	border-radius: 3px;
+
+}
+
+
+.destinationss:hover {
+	color: black;
+	background-color: darkgrey;
+}

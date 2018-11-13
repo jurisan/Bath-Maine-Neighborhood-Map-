@@ -1,0 +1,44 @@
+[
+  {
+    "name": "Cafe Creme",
+	"type": "cafe",
+	"address": "56 Front St, Bath, ME 04530",
+    "lat": 43.912610,
+    "lng": -69.814188
+  },
+  {
+    "name": "Frostys Donuts",
+	"type": "cafe",
+	"address": "770 Washington St, Bath, ME 04530",
+    "lat": 43.9120981,
+    "lng": -69.816503
+  },
+  {
+    "name": "Mae's Cafe & Bakery",
+	"type": "cafe",
+	"address": "160 Centre St, Bath, ME 04530",
+    "lat": 43.911322,
+    "lng": -69.819609
+  },
+  {
+    "name": "Mateo's Hacienda",
+	"type": "restaurant",
+	"address": "56 Centre St, Bath, ME 04530",
+    "lat": 43.912444,
+    "lng": -69.8157
+  },
+  {
+    "name": "J R Maxwell & Co.",
+	"type": "restaurant",
+	"address": "122 Front St, Bath, ME 04530", 
+    "lat": 43.913840,
+    "lng": -69.814290
+  },
+  {
+    "name": "Witch Spring Hill Ice Cream",
+	"type": "Ice Cream Shop",
+	"address": "60 State Rd, West Bath, ME 04530",
+    "lat": 43.904434,
+    "lng": -69.836769
+  }
+]
