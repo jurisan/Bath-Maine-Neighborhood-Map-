@@ -3,12 +3,11 @@ import './App.css'; //** Imports App.css
 import bathLocationList from './components/bathLocationList'; //** Imports Location data from bath
 
 
-
 class App extends Component {
 	state = {
 	destinations: require('./bathPlaces.json'),
 	map: '',
-	infowindow: '',
+	infoWindow: '',
 	prevmapMarker: ''
 	};
 
@@ -69,18 +68,21 @@ initMap(){
 
 /** Info Window */
 	let InfoWindow = new window.google.maps.InfoWindow({});
+	let destinations = [];
 /** https://developers.google.com/maps/documentation/javascript/reference/info-window#InfoWindowOptions */
 	
 	
-	window.google.maps.event.addEventListener(InfoWindow, 'closeclick', function() {
+	window.google.maps.event.addListener(InfoWindow, 'closeclick', function(){
 		self.closeInfoWindow();
         });
 	
 /*updates */
 	this.setState({
-            map: map,
-            infowindow: InfoWindow		
+    map: map,
+    InfoWindow: InfoWindow		
     });
+	
+
 //** center your map */
 	window.google.maps.event.addDomListener(window, 'resize', function(){
 	let centered = map.getCenter();
@@ -88,43 +90,41 @@ initMap(){
 	self.state.map.setCenter(centered);
 	});
 	
-	window.google.maps.event.addEventListener(map, 'click', function(){
+	window.google.maps.event.addListener(map, 'click', function(){
 		self.closeInfoWindow();
 	});
 	
-	let destinations = [];
 	this.state.destinations.forEach(function(location) {
 		let contact = location.name + location.address;
 		let mapMarker = new window.google.maps.Marker({
 			position: new window.google.maps.LatLng(
 			location.latitude,
-			location.longitude
+			location.longitude,
 			),
 			animation: window.google.maps.Animation.DROP,
-			map:map,			
+			map:map
 		});
 /** https://developers.google.com/maps/documentation/javascript/examples/marker-animations  */
 	mapMarker.addListener('click', function(){
 		self.openInfoWindow(mapMarker);
 	});	  
 		
-	location.contact = contact;
-	location.display = true;
-	location.mapMarker = mapMarker;
-	destinations.push(location);	
+			location.contact = contact;
+			location.display = true;
+			location.mapMarker = mapMarker;
+			destinations.push(location);	
 	});
 	
 	this.setState({
 		destinations: destinations
 	});
-    }
+}
 
 /** Find out more about location */
 	openInfoWindow(mapMarker) {
-		this.closeInfoWindow();
-		this.state.InfoWindow.open(this.state.map, mapMarker);
+		this.closeInfoWindow();		
 		this.setState({
-			'prevmapMarker': mapMarker
+			prevmapMarker: mapMarker
 		});
 
 		mapMarker.setAnimation(window.google.maps.Animation.BOUNCE);
@@ -132,8 +132,18 @@ initMap(){
 		this.state.infoWindow.open(this.state.map, mapMarker);
 		this.foursquareInfo(mapMarker);
 	}
+	
+	closeInfoWindow() {
+		if (this.state.prevmapMarker) {
+			this.state.prevmapMarker.setAnimation(null);
+		}
+		this.setState({
+			prevmapMarker:''
+		});
+		 this.state.openInfoWindow.close();
+	}
 
-
+//** Grab data from Foursquare.com about location
 	foursquareInfo(mapMarker){
 	let self = this;
 /** Put your FourSquare Info here */
@@ -158,36 +168,26 @@ initMap(){
 				
 				self.state.infowindow.setContent(locationName + locationAddress + moreInfo);
 			});
-		 }
-	)
+		 })
 		.catch(function (err) {
-		       self.state.infowindow.setContent('Data cannot be loaded.');
+		       self.state.infoWindow.setContent('Data cannot be loaded from FourSquare.');
 		  });
 }
-	closeInfoWindow() {
-	if (this.state.prevmapMarker) {
-		this.state.prevmapMarker.setAnimation(null);
-	}
-	this.setState({
-		'prevmapMarker': ''
-	});
-	this.state.infoWindow.close();
-	}
-	
+
 
 	render(){
 		return (
 		<div>
 			<header className= 'App-header'>
-			<h1 className="react-app-name">Bath Maine Neighborhood Map</h1>
+			<h1 className='App-title'>Bath Maine Neighborhood Map</h1>
 			</header>
 			<bathLocationList 
 			key = "10"
 			destinations = {this.state.destinations}
-			openInfoWindow = {this.closeInfoWindow}
+			openInfoWindow = {this.openInfoWindow}
 			closeInfoWindow = {this.closeInfoWindow}
 			/>
-			<div id="map" />
+			<div id="map" aria-labelledby='application' aria-label="Map with Bath destinations" tabIndex='4'/>
 			</div>
 			);
 		}
@@ -196,17 +196,17 @@ initMap(){
 export default App;
 
 /** load map */
-function loadMap(src) {
-	let ref = window.document.getElementsByTagName('script')[0];
+
+function loadMap(mapURL) {
+	let ref = window.document.getElementsByTagName("script")[0];
 	let script = window.document.createElement("script");
-	script.src = src;
+	script.src = mapURL;
 	script.async = true;
 	script.onerror = function() {
-		document.write("Google Maps can't be loaded");
+		document.write("Google Maps failed to load");
 	};
 	ref.parentNode.insertBefore(script, ref);	
 }
-
 
 
 

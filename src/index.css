@@ -5,45 +5,40 @@ body {
 	font-weight: 400;
 }
 
-.search-box {
-	
+.search-textbox { //** Design of textbox */
+	font-size: 0.5em;
+	font-family: 'Amatic SC', cursive, san-serif, Verdana;
 	top: 20px;
 	left: 20px;
-	position: fixed;
 	border-radius: 4px;
 }
 
-.search-field {
+.search-container {  //** Where the search bar is positioned */
 	width: 230px;
 	padding: 6px;
-	
+	position: fixed;
+	z-index: 1;
 }
 
-.search-items {
+.destinations-list {
 	background: #AFE089;
-	border: navy;
+	border: green;
 	border-radius: 4px;
 	overflow: auto;
 	max-height: 200px;
 	padding: 0px;
-	margin: 0px;
-	font-family: 'Amatic SC', cursive;
+	margin: 5px;
+	font-family: 'Amatic SC', cursive, san-serif, Verdana;
 	font-size: 1em;
 	
 }
 
 .destinations {
-	font-family: 'Amatic SC', cursive;
-	font-size: 1em;
 	color: floralwhite;
 	cursor: pointer;
-	transition: background-color 5400ms;
+	font-family: 'Amatic SC', cursive, san-serif, Verdana;
+	font-size: 1em;
+	transition: background-color 400ms;
 	border-radius: 3px;
-
 }
 
-
-.destinationss:hover {
-	color: black;
-	background-color: darkgrey;
-}

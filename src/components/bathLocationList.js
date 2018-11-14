@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-
 import bathLocation from './bathLocation';
 
 class bathLocationList extends Component {
@@ -15,12 +14,12 @@ constructor(props) {
 	/** https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_objects/Function/bind */
 }
 
-filterLocations(event) {
+filterDestinations(event) {
 	this.props.closeInfoWindow();
 	const {value} = event.target;
 	let locations = [];
 	this.props.destinations.forEach(function(location){
-		if (location.longname.toLowerCase().indexOf(value.toLowerCase())>=0){
+		if (location.contact.toLowerCase().indexOf(value.toLowerCase())>=0){
 			location.marker.setVisible(true);
 			locations.push(location);
 		}else{
@@ -43,8 +42,33 @@ ComponentWillMount() {
 
 //* list of my Destinations
 render() {
-	let destinationList = this.state.locations.map((listIte))
+	let destinationList = this.state.locations.map(function(bathLocationList, index){
+		return (<
+		bathLocation key = {index}
+		openInfoWindow = {this.props.openInfoWindow.bind(this)}
+	    data = {bathLocationList}
+		/>
+		);
+},this);
+
+return (<
+		  div className= "search-field" id="search-box">
+			<input 
+			className="search-textbox"		
+			role= "search"
+	    aria-labelledby="search-box"
+			type="text"
+			placeholder="Search Bath, Maine"
+			value={this.state.query}		
+			onChange={this.filterDestinations}	
+			/>
+		<ul className="search-items">		
+			{destinationList}
+		</ul>
+		</div>																						 
+		);
+	}
 }
 
+export default bathLocationList; 
 
-}
