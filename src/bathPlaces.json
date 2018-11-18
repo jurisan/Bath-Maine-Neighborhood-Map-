@@ -1,44 +1,44 @@
 [
   {
-    "name": "Cafe Creme",
-	"type": "cafe",
-	"address": "56 Front St, Bath, ME 04530",
+    "name": "Café Creme",
+    "Telephone": "Coffee",
     "lat": 43.912610,
     "lng": -69.814188
   },
   {
-    "name": "Frosty's Donuts",
-	"type": "cafe",
-	"address": "770 Washington St, Bath, ME 04530",
-    "lat": 43.9120981,
-    "lng": -69.816503
+    "name": "Beale Street Barbeque",
+    "Telephone": "Barbeque",
+    "lat": 43.913172,
+    "lng": -69.815224
   },
   {
     "name": "Mae's Cafe & Bakery",
-	"type": "cafe",
-	"address": "160 Centre St, Bath, ME 04530",
+    "Telephone": "207.443.6454",
     "lat": 43.911322,
     "lng": -69.819609
   },
   {
-    "name": "Mateo's Hacienda",
-	"type": "restaurant",
-	"address": "56 Centre St, Bath, ME 04530",
-    "lat": 43.912444,
-    "lng": -69.8157
+    "name": "The Cabin",
+    "Telephone": "Pizza",
+    "lat": 43.904723,
+    "lng": -69.816006
   },
   {
     "name": "J R Maxwell & Co.",
-	"type": "restaurant",
-	"address": "122 Front St, Bath, ME 04530", 
-    "lat": 43.913840,
-    "lng": -69.814290
+    "Telephone": "Restaurant",
+    "lat": 43.913819,
+    "lng": -69.814407
   },
   {
     "name": "Witch Spring Hill Ice Cream",
-	"type": "Ice Cream Shop",
-	"address": "60 State Rd, West Bath, ME 04530",
+    "Telephone": "Ice Cream",
     "lat": 43.904434,
     "lng": -69.836769
+  },
+	{
+    "name": "Salt Pine Social",
+    "Telephone": "Restaurant",
+    "lat": 43.916768,
+    "lng": -69.814646
   }
 ]

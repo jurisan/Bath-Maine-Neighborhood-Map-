@@ -1,10 +1,10 @@
 import React from 'react';
 
-class bathLocation extends React.Component {
+class Location extends React.Component {
   render() {
     return (
       <li
-        className="destinations"
+        className="place"
         role="button"
         tabIndex="0"
         onKeyPress={this.props.openInfoWindow.bind(
@@ -13,10 +13,10 @@ class bathLocation extends React.Component {
         )}
         onClick={this.props.openInfoWindow.bind(this, this.props.data.marker)}
       >
-        {this.props.data.contact}
+        {this.props.data.placeName}
       </li>
     );
   }
 }
 
-export default bathLocation;
+export default Location;

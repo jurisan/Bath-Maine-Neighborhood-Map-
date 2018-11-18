@@ -5,40 +5,58 @@ body {
 	font-weight: 400;
 }
 
-.search-textbox { //** Design of textbox */
-	font-size: 0.5em;
+h4 {
 	font-family: 'Amatic SC', cursive, san-serif, Verdana;
-	top: 20px;
-	left: 20px;
-	border-radius: 4px;
+	font-size: 2.3em;
+  color:  black;
 }
 
-.search-container {  //** Where the search bar is positioned */
-	width: 230px;
-	padding: 6px;
-	position: fixed;
+.search-container {
 	z-index: 1;
+	position: fixed;
+	top: 5px;
+	left:5px;
 }
 
-.destinations-list {
-	background: #AFE089;
-	border: green;
-	border-radius: 4px;
+.search-box {
+	font-size: 3em;
+	z-index: 1;
+	position: absolute;
+	left: 2%;
+	top: 13%;
+	background-color: antiquewhite;
+	opacity: 0.5;
+	border-radius: 8px;
+	max-height: 50%;
 	overflow: auto;
-	max-height: 200px;
-	padding: 0px;
-	margin: 5px;
-	font-family: 'Amatic SC', cursive, san-serif, Verdana;
-	font-size: 1em;
-	
 }
 
-.destinations {
-	color: floralwhite;
+.search-textbox {
+	width: 380px;
+	padding: 8px;
+	font-size: 1em;
+	font-family: 'Amatic SC', cursive, san-serif, Verdana;
+	font-weight: 300;
+	border-radius: 8px;
+}
+
+.list-container {
+	padding: 0;
+	margin: 9px;
+	overflow: auto;
+	z-index: 10;
+}
+
+.place {
+	font-size: 1em;
+	color: black;
+	font-family: 'Amatic SC', cursive, san-serif, Verdana;
 	cursor: pointer;
-	font-family: 'Amatic SC', cursive, san-serif, Verdana;
-	font-size: 1em;
-	transition: background-color 400ms;
-	border-radius: 3px;
+	border-radius: 4px;
+
 }
 
+.place:hover {
+  color: black;
+  background-color: #F8D3DB;
+}
