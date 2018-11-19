@@ -46,7 +46,7 @@ initMap(){
 			position: window.google.maps.ControlPosition.BOTTOM_CENTER
 		},
 	   	center: { lat: 43.912949, lng: -69.813771 },
-      zoom: 16,
+      zoom: 15,
 //** https://developers.google.com/maps/documentation/javascript/styling **//
 			styles: [
             {elementType: 'geometry', stylers: [{color: '#242f3e'}]},
@@ -176,7 +176,7 @@ window.google.maps.event.addDomListener(window, 'resize', function() {
 
 
 	this.state.places.forEach(function(location){
-		let placeName = location.name;
+		let placeName = location.name ;
 		let marker = new window.google.maps.Marker({
 			position: new window.google.maps.LatLng(
 			location.lat,
