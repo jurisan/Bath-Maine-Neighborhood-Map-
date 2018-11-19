@@ -15,7 +15,8 @@ h4 {
 	z-index: 1;
 	position: fixed;
 	top: 5px;
-	left:5px;
+	left: 5px;
+
 }
 
 .search-box {
@@ -23,17 +24,17 @@ h4 {
 	z-index: 1;
 	position: absolute;
 	left: 2%;
-	top: 13%;
+	top: 20%;
 	background-color: antiquewhite;
 	opacity: 0.5;
-	border-radius: 8px;
+	border-radius: 20px;
 	max-height: 50%;
 	overflow: auto;
 }
 
 .search-textbox {
-	width: 380px;
-	padding: 8px;
+	width: 420px;
+	padding: 6px;
 	font-size: 1em;
 	font-family: 'Amatic SC', cursive, san-serif, Verdana;
 	font-weight: 300;
@@ -41,22 +42,23 @@ h4 {
 }
 
 .list-container {
-	padding: 0;
-	margin: 9px;
+	padding: 5px;
+	margin: 18px;
 	overflow: auto;
 	z-index: 10;
 }
 
 .place {
-	font-size: 1em;
+	font-size: 0.9em;
 	color: black;
 	font-family: 'Amatic SC', cursive, san-serif, Verdana;
 	cursor: pointer;
-	border-radius: 4px;
+	border-radius:3px;
 
 }
 
 .place:hover {
   color: black;
   background-color: #F8D3DB;
+
 }

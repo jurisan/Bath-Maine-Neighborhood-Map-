@@ -46,7 +46,7 @@ initMap(){
 			position: window.google.maps.ControlPosition.BOTTOM_CENTER
 		},
 	   	center: { lat: 43.912949, lng: -69.813771 },
-      zoom: 15,
+      zoom: 16,
 //** https://developers.google.com/maps/documentation/javascript/styling **//
 			styles: [
             {elementType: 'geometry', stylers: [{color: '#242f3e'}]},
@@ -248,7 +248,7 @@ window.google.maps.event.addDomListener(window, 'resize', function() {
 			response.json().then (function (data) {
 				let locationInfo = data.response.venues[0];
 				let	location = `<h4>${locationInfo.name}</h4>`;
-				let address =`<p><h4>Address: ${locationInfo.location.address}</h4></p>`;
+				let address =`<h4>Address: ${locationInfo.location.address}</h4>`;
 				let moreInfo = '<a href="https://foursquare.com/v/'+ locationInfo.id +'" target="_blank"><b> Visit Foursquare for reviews! </b></a>';
 				self.state.infoWindow.setContent(location + address + moreInfo);
 			});
@@ -265,7 +265,7 @@ window.google.maps.event.addDomListener(window, 'resize', function() {
 		<div>
 			<header className= 'Map-header'>
 			<h1 className='Map-title'>Bath Maine Neighborhood Map</h1>
-			<h2 className='Bath-url'>'<a href="https://visitbath.com/">Happenings at City of Bath</a></h2>
+			<h2 className='Bath-url'><a href="https://visitbath.com/" target="_blank">Visit City of Bath</a></h2>
 			</header>
 			<LocationList
 				key = "100"

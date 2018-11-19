@@ -1,43 +1,46 @@
 [
   {
-    "name": "Café Creme",
-    "Telephone": "Coffee",
+    "name": "Cafe Creme",
     "lat": 43.912610,
     "lng": -69.814188
   },
   {
     "name": "Beale Street Barbeque",
-    "Telephone": "Barbeque",
     "lat": 43.913172,
     "lng": -69.815224
   },
   {
+    "name": "Byrnes' Irish Pub",
+    "lat": 43.912446,
+    "lng": -69.815671
+  },
+  {
     "name": "Mae's Cafe & Bakery",
-    "Telephone": "207.443.6454",
     "lat": 43.911322,
     "lng": -69.819609
   },
   {
-    "name": "The Cabin",
-    "Telephone": "Pizza",
+    "name": "The Cabin Restaurant",
     "lat": 43.904723,
     "lng": -69.816006
   },
   {
-    "name": "J R Maxwell & Co.",
-    "Telephone": "Restaurant",
+    "name": "J R Maxwell & Boatbuilders Pub",
     "lat": 43.913819,
     "lng": -69.814407
   },
   {
     "name": "Witch Spring Hill Ice Cream",
-    "Telephone": "Ice Cream",
     "lat": 43.904434,
     "lng": -69.836769
   },
+  {
+    "name": "Run with Soup",
+    "lat": 43.930609,
+    "lng": -69.815562
+  },
 	{
     "name": "Salt Pine Social",
-    "Telephone": "Restaurant",
     "lat": 43.916768,
     "lng": -69.814646
   }

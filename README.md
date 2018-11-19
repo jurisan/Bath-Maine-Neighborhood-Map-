@@ -30,3 +30,6 @@
 - https://developer.foursquare.com/
 - https://developers.google.com/maps/documentation/javascript/
 - https://www.w3schools.com/
+- https://stackoverflow.com/
+- https://github.com/blurdylan/neighborhood-map-react
+- https://github.com/ColinAshley/letsgo
