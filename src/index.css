@@ -7,49 +7,43 @@ body {
 
 h4 {
 	font-family: 'Amatic SC', cursive, san-serif, Verdana;
-	font-size: 2.3em;
+	font-weight: 600;
+	font-size: 1.5em;
   color:  black;
-}
-
-.search-container {
-	z-index: 1;
-	position: fixed;
-	top: 5px;
-	left: 5px;
-
+	text-decoration: underline;
 }
 
 .search-box {
-	font-size: 3em;
+	font-size: 1.5em;
 	z-index: 1;
 	position: absolute;
-	left: 2%;
-	top: 20%;
+	left: 15px;
+	top: 138px;
 	background-color: antiquewhite;
-	opacity: 0.5;
-	border-radius: 20px;
+	opacity: 0.7;
+	border-radius: 4px;
 	max-height: 50%;
 	overflow: auto;
 }
 
 .search-textbox {
-	width: 420px;
-	padding: 6px;
+	width: 230px;
+	padding: 3px;
 	font-size: 1em;
 	font-family: 'Amatic SC', cursive, san-serif, Verdana;
 	font-weight: 300;
-	border-radius: 8px;
+	border-radius: 4px;
 }
 
 .list-container {
-	padding: 5px;
-	margin: 18px;
+	padding: 2px;
+	margin: 10px;
 	overflow: auto;
 	z-index: 10;
 }
 
 .place {
-	font-size: 0.9em;
+	font-size: 1em;
 	color: black;
 	font-family: 'Amatic SC', cursive, san-serif, Verdana;
 	cursor: pointer;

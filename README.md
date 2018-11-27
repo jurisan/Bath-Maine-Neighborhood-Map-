@@ -12,8 +12,8 @@
 
 ### Code Dependencies
 
-- Google Maps API
-- Foursquare API
+- Google Maps API - Insert personal Google API KEY
+- Foursquare API - Insert personal most recent version Foursquare API KEY
 - React
 - jQuery
 - JavaScript
@@ -25,6 +25,7 @@
 - Choose the location from search field.
 - Click on Markers to see more detail on foursquare site.
 
+
 ### References
 
 - https://developer.foursquare.com/
@@ -33,3 +34,4 @@
 - https://stackoverflow.com/
 - https://github.com/blurdylan/neighborhood-map-react
 - https://github.com/ColinAshley/letsgo
+-  https://medium.freecodecamp.org

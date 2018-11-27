@@ -43,7 +43,7 @@ initMap(){
 		/** https://developers.google.com/maps/documentation/javascript/controls  */
 		mapTypeControlOptions: {
 			style: window.google.maps.MapTypeControlStyle.DEFAULT,
-			position: window.google.maps.ControlPosition.BOTTOM_CENTER
+			position: window.google.maps.ControlPosition.RIGHT_BOTTOM
 		},
 	   	center: { lat: 43.912949, lng: -69.813771 },
       zoom: 15,
@@ -212,7 +212,7 @@ window.google.maps.event.addDomListener(window, 'resize', function() {
 		marker.setAnimation(window.google.maps.Animation.BOUNCE);
 		this.state.infoWindow.setContent('Wait...');
 		this.state.map.setCenter(marker.getPosition());
-    this.state.map.panBy(0, - 100);
+    this.state.map.panBy(0, - 700);
 		this.state.infoWindow.open(this.state.map, marker);
 		this.foursquareInfo(marker);
 	}
@@ -265,10 +265,10 @@ window.google.maps.event.addDomListener(window, 'resize', function() {
 		<div>
 			<header className= 'Map-header'>
 			<h1 className='Map-title'>Bath Maine Neighborhood Map</h1>
-			<h2 className='Bath-url'><a href="https://visitbath.com/" target="_blank">Visit City of Bath</a></h2>
+			<h3 className='Bath-url'><a href="https://visitbath.com/" target="_blank">Visit City of Bath</a></h3>
 			</header>
 			<LocationList
-				key = "100"
+				key = "10"
 				places = {this.state.places}
 				openInfoWindow = {this.openInfoWindow}
 				closeInfoWindow = {this.closeInfoWindow}
